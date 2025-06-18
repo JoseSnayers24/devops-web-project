@@ -87,7 +87,7 @@ If you see this line on GitHub, it means your latest changes have been pushed to
 🔄 VSCode SSH Remote kept disconnecting
 
 Problem:
-When connecting to my EC2 instance via VSCode Remote - SSH, it kept crashing or getting stuck.
+When connecting to my EC2 instance via VSCode Remote SSH, it kept crashing or getting stuck.
 
 Cause:
 My EC2 instance had only 1 GB of RAM, and VSCode’s remote extension caused the RAM to spike.
