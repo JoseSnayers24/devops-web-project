@@ -7,7 +7,7 @@ phases:
   pre_build:
     commands:
       - echo Initializing environment
-      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain nextwork --domain-owner 123456789012 --region us-east-2 --query authorizationToken --output text`
+      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain devops --domain-owner 123456789012 --region us-east-2 --query authorizationToken --output text`
       - export CODEARTIFACT_MAVEN_REPO_URL=`aws codeartifact get-repository-endpoint --domain devops --domain-owner 123456789012 --repository webapp-cicd --format maven --region us-east-2 --query repositoryEndpoint --output text`
       - mkdir -p ~/.m2
       - |
@@ -42,5 +42,5 @@ phases:
       - mvn -s settings.xml package
 artifacts:
   files:
-    - target/nextwork-web-project.war
+    - target/devops-web-project.war
   discard-paths: no
