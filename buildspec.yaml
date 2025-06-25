@@ -7,8 +7,8 @@ phases:
   pre_build:
     commands:
       - echo Initializing environment
-      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain devops --domain-owner 254422853560 --region us-east-2 --query authorizationToken --output text`
-      - export CODEARTIFACT_MAVEN_REPO_URL=`aws codeartifact get-repository-endpoint --domain devops --domain-owner 254422853560 --repository webapp-cicd --format maven --region us-east-2 --query repositoryEndpoint --output text`
+      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain devops --domain-owner 254422853560 --region eu-north-1 --query authorizationToken --output text`
+      - export CODEARTIFACT_MAVEN_REPO_URL=`aws codeartifact get-repository-endpoint --domain devops --domain-owner 254422853560 --repository webapp-cicd --format maven --region eu-north-1 --query repositoryEndpoint --output text`
       - mkdir -p ~/.m2
       - |
         cat > settings.xml <<EOF
