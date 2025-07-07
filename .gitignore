@@ -4,3 +4,6 @@ ssh.pub
 
 #Maven settings
 settings.xml
+
+#Codedeploy YAML file
+webapp.yaml
